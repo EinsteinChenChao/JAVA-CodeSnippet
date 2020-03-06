@@ -1,0 +1,35 @@
+/**
+ * 项目名称：选择排序
+ * 作者：陈超
+ * 日期：2020.3.6
+ */
+public class HelloWorld {
+    public static void main(String[] args) {
+        int[] dx={19,20,4,35,6,78,100,33,90,55};
+        int tmp1index=-1;
+        for(int i=0;i<dx.length-1;i++)
+        {
+            int tmp=dx[i];
+            int tmp1=dx[i+1];
+
+            for(int j=i+1;j<dx.length;j++)
+            {
+                if(tmp1>dx[j])
+                {
+                    tmp1=dx[j];
+                    tmp1index=j;
+                }
+            }
+            if(tmp>tmp1)
+            {
+                dx[i]=tmp1;
+                dx[tmp1index]=tmp;
+            }
+        }
+        for(int i=0;i<dx.length;i++)
+        {
+            System.out.print(dx[i]+"\t");
+        }
+
+    }
+}
