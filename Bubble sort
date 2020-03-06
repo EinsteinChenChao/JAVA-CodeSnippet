@@ -1,0 +1,28 @@
+/**
+ *项目名称：冒泡排序案例
+ *作者：陈超
+ * 日期：2020.3.6
+ */
+public class HelloWorld {
+    public static void main(String[] args) {
+        int[] dx={19,20,4,35,6,78,100,33,90,55};
+        for(int i=0;i<dx.length;i++)
+        {
+            for(int j=0;j<dx.length-i-1;j++)
+            {
+                if(dx[j]<dx[j+1])
+                {
+                    int temp=0;
+                    temp=dx[j+1];
+                    dx[j+1]=dx[j];
+                    dx[j]=temp;
+                }
+            }
+        }
+        for(int i=0;i<dx.length;i++)
+        {
+            System.out.print(dx[i]+"\t");
+        }
+
+    }
+}
